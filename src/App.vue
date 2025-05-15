@@ -1,17 +1,24 @@
 <template>
+  <!-- main : div principal que tem colunas -->
   <main class=" columns is-gapless is-multiline " :class="{ 'modo-escuro': modoEscuroAtivo }">
+    
+    <!--  coluna que é a barra lateral com um quarto-->
     <div class="column is-one-quarter">
       <BarraLateral @aoTemaAlterado="trocarTema"/>
     </div>
+
+    <!-- coluna com 3 quartos -->
     <div class="column is-three-quarter conteudo">
       <Formulario @aoSalvarTarefa="salvarTarefa"  />
       <div class="lista">
-        <Tarefa v-for="(  tarefa, index ) in tarefas" :key="index" :tarefa="tarefa  "/>
         <Box v-if="listaEstaVazia">
           Você não está muito produtivo hoje :(
         </Box>
+        <Tarefa v-for="(  tarefa, index ) in tarefas" :key="index" :tarefa="tarefa  "/>
       </div>
+      !! visualização de acordo com a URL(com a rota)
     </div>
+
   </main>
 </template>
 
