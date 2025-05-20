@@ -9,9 +9,9 @@
   </Box>
 </template>
 <script lang="ts">
+import ITarefa from "../interfaces/ITarefa.js";
 import { defineComponent, PropType } from "vue";
 import Cronometro from "./Cronometro.vue";
-import ITarefa from "../interfaces/ITarefa.js";
 import Box from './Box.vue';
 
 export default defineComponent({

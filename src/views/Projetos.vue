@@ -32,28 +32,43 @@
   </section>
 </template>
 <script lang="ts">
-import { defineComponent } from "vue";
+import { computed, defineComponent } from "vue";
+import { useStore } from "@/store";
 import IProjeto from "../interfaces/IProjeto.js";
 export default defineComponent({
   name: "ProjetosS",
   data() {
     return {
-      // estado que esta vinculado ao input
+      // estado local que esta vinculado ao input
       nomeDoProjeto: "",
-      projetos: [] as IProjeto[],
+     // projetos: [] as IProjeto[], estado global
     };
   },
   methods: {
     salvar() {
-      const projeto: IProjeto = {
-        // quando o usuario submet pega-se o input e coloca no nome do projeto
-        nome: this.nomeDoProjeto,
-        id: new Date().toISOString(),
-      };
-      this.projetos.push(projeto);
+      //AO INVES DE USAR ISSO
+      // const projeto: IProjeto = {
+      //   // quando o usuario submet pega-se o input e coloca no nome do projeto
+      //   nome: this.nomeDoProjeto,
+      //   id: new Date().toISOString(),
+      // };
+      // this.projetos.push(projeto);
+      //USA O MODELO ABAIXO
+
+      //METODO COmmit para chamar uma mutação tem 2 parametros(nome mutation, nome do projeto em si)
+      this.store.commit('ADICIONA_PROJETO', this.nomeDoProjeto)
       this.nomeDoProjeto = "";
     },
   },
+  //metodo, lista de projetos
+  setup () {
+    const store = useStore()
+    return {
+      store,
+      projetos: computed(() => store.state.projetos)
+    }
+  }
+
 });
 </script>
 <style scoped>
