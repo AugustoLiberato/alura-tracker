@@ -9,23 +9,25 @@
 
     <!-- coluna com 3 quartos -->
     <div class="column is-three-quarter conteudo">
+      <Notificacoes />
       <!-- aqui vai a VIEW correspondente -->
        <!-- indicando para o nosso roteador onde ele vai renderizar a nossa visualização  -->
        <router-view></router-view>
     </div>
-
   </main>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
 import BarraLateral from "./components/BarraLateral.vue";
+import Notificacoes from "./components/Notificacoes.vue";
 
 export default defineComponent({
   name: 'App',
   /**Componentes realcionados a esse componente, compondo componentes com outros componentes */
   components: {
     BarraLateral,
+    Notificacoes
   },
   data () {
     return {
