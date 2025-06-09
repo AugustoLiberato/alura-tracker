@@ -1,5 +1,5 @@
 <template>
-  <section >
+  <section>
     <form @submit.prevent="salvar">
       <div class="field">
         <label for="nomeDoProjeto" class="label">Nome do projeto</label>
@@ -19,58 +19,67 @@
 
 <script lang="ts">
 import { useStore } from "@/store";
-import {  defineComponent } from "vue";
+import { defineComponent, ref } from "vue";
 
-import { ALTERAR_PROJETO, ADICIONA_PROJETO } from "@/store/tipo-mutacoes"
+import { ALTERAR_PROJETO } from "@/store/tipo-mutacoes";
 import { TipoNotificacao } from "@/interfaces/INotificacao";
 
-import useNotificador  from "@/hooks/notificador";
+import useNotificador from "@/hooks/notificador";
+import { CADASTRAR_PROJETO } from "@/store/tipo-acoes";
+import { useRouter } from "vue-router";
 
 export default defineComponent({
   name: "FormularioO",
+  //prop(property), pass value from parent component to a child component 
   props: {
     id: {
-      type: String
-    }
+      type: String,
+    },
   },
-  mounted () {
-    if(this.id) {
-      const projeto = this.store.state.projetos.find(proj => proj.id == this.id)
-      console.log(projeto)
-      this.nomeDoProjeto = projeto?.nome || ''
+  setup(props) {
+    const router = useRouter();
+    //para ter acesso a store
+    const store = useStore();
+    const{ notificar } = useNotificador();
+
+    const nomeDoProjeto = ref("");
+
+    if (props.id ) {
+     const projeto = store.state.projeto.projetos.find(
+        (proj) => proj.id == props.id
+      );
+      //nome do projeto é uma referência para uma variavel reativa
+      nomeDoProjeto.value = projeto?.nome || "";                             
     }
-  },
-  data() {
-    return { 
-      nomeDoProjeto: "",
+    const lidarComSucesso = () => {
+      nomeDoProjeto.value = "";
+      notificar(
+        TipoNotificacao.SUCESSO,
+        "Excelente!",
+        "O projeto foi cadastrado com sucesso!"
+      );
+      router.push("/projetos");
+    }
+
+    const salvar = () => {
+      if(props.id) {
+        store
+          .dispatch(ALTERAR_PROJETO, {
+            id: props.id,
+            nome: nomeDoProjeto.value
+          })
+          .then(() => lidarComSucesso());
+      } else {
+        store
+          .dispatch(CADASTRAR_PROJETO, nomeDoProjeto.value)
+          .then(() => lidarComSucesso)
+      }
+    }
+
+    return {
+      nomeDoProjeto,
+      salvar
     };
   },
-  methods: {
-    salvar() {
-      if(this.id) {
-        this.store.commit(ALTERAR_PROJETO,{
-          id: this.id,
-          nome: this.nomeDoProjeto
-        });
-      } else {
-        this.store.commit(ADICIONA_PROJETO, this.nomeDoProjeto)
-      }
-      this.nomeDoProjeto = "";
-      this.notificar(TipoNotificacao.SUCESSO, 'Excelent!', 'O projeto foi cadastrado com sucesso!!')
-      this.$router.push('/projetos');
-    },
-
-  },
-  //metodo, lista de projetos
-  setup () {
-    const store = useStore()
-    const { notificar } = useNotificador()
-    return {
-      store,
-      notificar
-    }
-  }
-
 });
 </script>
-
