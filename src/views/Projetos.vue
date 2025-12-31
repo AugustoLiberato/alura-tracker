@@ -16,6 +16,10 @@ export default defineComponent({
 <style scoped>
 .projetos {
   padding: 1.25rem;
+ 
+}
+.title {
+   color: #3375b4 
 }
 </style>
 

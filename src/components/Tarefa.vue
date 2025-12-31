@@ -50,5 +50,6 @@ export default defineComponent({
 .clicavel{
   cursor: pointer;
 }
+
 </style>
 
