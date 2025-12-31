@@ -5,7 +5,10 @@ Esse foi um dos vários cursos da Alura que fiz para me preparar para as demanda
 ### Instalar todas as dependências 
 npm install
 
-### Rodar o backend
+### Rodar o Frontend
+ npm run serve
+
+### Rodar o Backend
 npm run backend
 
 ### Em outro terminal rodar o frontend
