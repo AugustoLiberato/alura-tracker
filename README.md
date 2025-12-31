@@ -1,7 +1,7 @@
 # alura-tracker
 
 ### Clonar o repositório
-git clone [https://github.com/AugustoLiberato/alura-tracker.git]
+git clone  https://github.com/AugustoLiberato/alura-tracker.git 
 
 ### Instalar todas as dependências 
 npm install
@@ -9,7 +9,7 @@ npm install
 ### Rodar o backend
 npm run backend
 
-### Em outro terminal, rodar o frontend
+### Em outro terminal rodar o frontend
 npm run serve
 
 
