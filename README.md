@@ -5,7 +5,7 @@
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Rodar o Frontend (VUE)
 ```
 npm run serve
 ```
@@ -14,7 +14,10 @@ npm run serve
 ```
 npm run build
 ```
-
+## Roda o Backend
+```
+npx json-server --watch db.json --port 3000
+```
 ### Lints and fixes files
 ```
 npm run lint
