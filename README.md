@@ -1,7 +1,7 @@
 # alura-tracker
 Durante o curso da alura sobre framework Vue 3, fiz esse projeto que utiliza um temporizador para a realização de tarefas
 
-Esse foi um dos vários cursos da alura que fiz para me prepara para a demandas que me foram atribuidas. 
+Esse foi um dos vários cursos da Alura que fiz para me preparar para as demandas que me foram atribuídas. 
 ### Instalar todas as dependências 
 npm install
 
