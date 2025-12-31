@@ -1,8 +1,5 @@
 # alura-tracker
 
-### Clonar o repositório
-git clone  https://github.com/AugustoLiberato/alura-tracker.git 
-
 ### Instalar todas as dependências 
 npm install
 
