@@ -1,27 +1,19 @@
 # alura-tracker
 
-## Project setup
-```
+# 1. Clonar o repositório
+git clone [url-do-repositorio]
+
+# 2. Entrar na pasta
+cd alura-tracker
+
+# 3. Instalar todas as dependências (incluindo json-server)
 npm install
-```
 
-### Rodar o Frontend (VUE)
-```
+# 4. Rodar o backend
+npm run backend
+
+# 5. Em outro terminal, rodar o frontend
 npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-## Roda o Backend
-```
-npx json-server --watch db.json --port 3000
-```
-### Lints and fixes files
-```
-npm run lint
-```
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
