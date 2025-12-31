@@ -1,24 +1,15 @@
 # alura-tracker
 
-## Project setup
-```
+### Clonar o repositório
+git clone  https://github.com/AugustoLiberato/alura-tracker.git 
+
+### Instalar todas as dependências 
 npm install
-```
 
-### Compiles and hot-reloads for development
-```
+### Rodar o backend
+npm run backend
+
+### Em outro terminal rodar o frontend
 npm run serve
-```
 
-### Compiles and minifies for production
-```
-npm run build
-```
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
