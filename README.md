@@ -3,7 +3,7 @@ Durante o curso da alura sobre framework Vue 3, fiz esse projeto que utiliza um 
 
 Esse foi um dos vários cursos da Alura que fiz para me preparar para as demandas que me foram atribuídas. 
 
-O Backend está utilizando o My JSON Server
+O Backend está utilizando a versão grátis do My JSON Server, por estar em beta pode haver alguns contratempos.
 
 ### Instalar todas as dependências 
 npm install
