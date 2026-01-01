@@ -48,52 +48,6 @@
         "id": "1",
         "nome": "Alura Tracker 3.0"
       }
-    },
-    {
-      "id": "661b",
-      "duracaoEmSegundos": 2,
-      "descricao": "Teste",
-      "projeto": {
-        "id": "8c9f",
-        "nome": "Estudando padrões de projeto"
-      }
-    },
-    {
-      "id": "8ab7",
-      "duracaoEmSegundos": 4,
-      "descricao": "testando",
-      "projeto": {
-        "id": "37d6",
-        "nome": "Cadastroo"
-      }
-    },
-    {
-      "id": "e831",
-      "duracaoEmSegundos": 12,
-      "descricao": "Teste 2",
-      "projeto": {
-        "id": "1",
-        "nome": "Alura Tracker 3.0"
-      }
-    },
-    {
-      "id": "8e31",
-      "duracaoEmSegundos": 2,
-      "descricao": ""
-    },
-    {
-      "id": "5423",
-      "duracaoEmSegundos": 8,
-      "descricao": "aaa",
-      "projeto": {
-        "id": "aef5",
-        "nome": "GOL"
-      }
-    },
-    {
-      "id": "0bae",
-      "duracaoEmSegundos": 2,
-      "descricao": ""
     }
   ]
 }
