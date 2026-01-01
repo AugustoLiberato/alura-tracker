@@ -3,7 +3,7 @@ Durante o curso da alura sobre framework Vue 3, fiz esse projeto que utiliza um 
 
 Esse foi um dos vários cursos da Alura que fiz para me preparar para as demandas que me foram atribuídas. 
 
-Esse projeto está utilizando a versão grátis do My JSON Server que ainda esta em beta. Alguns contratempos como lentidão de respota acontece mesmo
+Esse projeto está utilizando a versão grátis do My JSON Server que ainda esta em beta. Alguns contratempos, como lentidão de respota, acabam acontecendo mesmo
 
 ### Instalar todas as dependências 
 npm install
